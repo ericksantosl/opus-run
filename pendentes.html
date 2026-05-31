@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpusRun | Tarefas Pendentes</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="public/css/style.css">
+
+     <!--tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body class="bg-zinc-950 text-white">
+    <main class="flex flex-col lg:flex-row lg:min-h-screen">
+        <!--barra lateral-->
+        <aside class="w-full lg:w-64 bg-zinc-900">
+
+            <!--logo-->
+            <a href="index.html">
+                <div class="flex justify-center items-center gap-1 p-6 mb-8">
+                    <i class="fa-solid fa-check text-3xl text-violet-600"></i>
+                    <h1 class="text-3xl font-bold">Opus<span class="text-violet-600">Run</span></h1>
+                </div>
+            </a>
+             
+            <nav>
+                <ul class="flex flex-col px-6 text-lg gap-3">
+                    <li><a href="dashboard.html" class="flex items-center gap-3 text-zinc-400 px-4 py-3 border rounded-xl border-transparent hover:border-violet-600 hover:text-violet-600">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Visão Geral</span>
+                    </a></li>
+
+                    <li><a href="todas-tarefas.html" class="flex items-center gap-3 text-zinc-400 px-4 py-3 border rounded-xl border-transparent hover:border-violet-600 hover:text-violet-600">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Tarefas</span>
+                    </a></li>
+
+                    <li><a href="#" class="flex items-center gap-3 bg-violet-600 rounded-xl px-4 py-3">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Pendentes</span>
+                    </a></li>
+
+                    <li><a href="concluidas.html" class="flex items-center gap-3 text-zinc-400 px-4 py-3 border rounded-xl border-transparent hover:border-violet-600 hover:text-violet-600">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span>Concluídas</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!--fim barra lateral-->
+
+        <div class="flex-1">
+            <div class="bg-violet-600 text-center py-3 px-4">
+                <p class="font-medium">Atenção: as funcionalidades deste sistema são meramente ilustrativas e não realizarão alterações reais no site.</p>
+            </div>
+
+            <!--lista de tarefas pendentes-->
+            <section class="flex flex-col bg-zinc-900 border border-zinc-800 m-3 rounded-xl py-4 gap-4">
+                <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between px-8">
+
+                    <div class="flex flex-col items-center lg:items-start pb-4">
+                        <h3 class="text-2xl font-bold">Tarefas pendentes</h3>
+                        <p class="text-sm text-zinc-400">Marque suas tarefas pendentes como concluídas.</p>
+                    </div>
+
+                    <div class="w-64 flex items-center gap-6 px-8 py-4 bg-yellow-100 border border-yellow-600 rounded-xl">
+                        <i class="fa-solid fa-clock text-4xl text-yellow-500 bg-yellow-200 p-3 rounded-xl"></i>
+                        <div>
+                            <span class="text-sm text-zinc-950">Pendentes</span>
+                            <h2 class="text-4xl text-yellow-500 font-bold">4</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="border-b border-zinc-800"></div>
+
+                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
+                    <span>Estudar para a prova de matemática</span>
+                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
+                        <i class="fa-solid fa-square-check text-2xl"></i>
+                    </button>
+                </article>
+
+                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
+                    <span>Finalizar relatório do projeto</span>
+                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
+                        <i class="fa-solid fa-square-check text-2xl"></i>
+                    </button>
+                </article>
+                
+                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
+                    <span>Atualizar planilha de dados</span>
+                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
+                        <i class="fa-solid fa-square-check text-2xl"></i>
+                    </button>
+                </article>
+
+                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
+                    <span>Reunião com o time de vendas</span>
+                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
+                        <i class="fa-solid fa-square-check text-2xl"></i>
+                    </button>
+                </article>
+            </section>
+            <!--fim lista tarefas recentes-->
+        </div>
+    </main>
+
+    <!--modal tarefa concluida-->
+    <div id="modalTarefaConcluida" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center">
+        <div class="flex flex-col justify-center items-center bg-zinc-900 border border-zinc-800 rounded-xl p-6 w-96">
+            <i class="fa-solid fa-check-double text-violet-600 text-6xl"></i>
+            <h2 class="text-2xl font-bold">Tarefa concluída!</h2>
+            <span class="text-sm mb-4">Sua tarefa foi marcada como concluída com sucesso!</span>
+            <button id="fecharTarefaConcluida" class="px-4 py-2 bg-violet-600 rounded-xl w-24">Fechar</button>
+        </div>
+    </div>
+
+    <script src="public/js/tarefas-pendentes.js"></script>
+</body>
+</html>

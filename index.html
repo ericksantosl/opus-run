@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpusRun</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="public/css/style.css">
+
+     <!--tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+<body class="bg-zinc-900 text-white">
+    <header class="flex items-center px-8 h-20 justify-between">
+
+        <!--logo-->
+        <div class="flex basis-1/4 items-center gap-1">
+            <i class="fa-solid fa-check text-3xl text-violet-600"></i>
+            <h1 class="text-3xl font-bold">Opus<span class="text-violet-600">Run</span></h1>
+        </div>
+        
+        <div>
+            <div class="flex gap-4">
+                <button id="btnCadastro" class="btn-em-breve bg-violet-600 hover:bg-violet-700 text-white px-5 py-2 rounded-xl transition duration-300">Cadastro</button>
+
+                <button id="btnLogin" class="btn-em-breve border-2 border-white hover:border-violet-700 text-white px-5 py-2 rounded-xl transition duration-300">Login</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--hero-->
+        <section class="hero flex flex-col lg:flex-row items-center px-8 py-20">
+            <div class="hero-container basis-1/2 pt-10">
+                <h1 class="text-5xl pb-2 font-bold">Organize suas tarefas e seja <span class="text-violet-600">mais produtivo</span></h1>
+                <p class="text-zinc-400">Gerencie suas tarefas, acompanhe o progresso e alcance seus objetivos com o OpusRun.</p>
+                <div class="pt-5">
+                    <a href="dashboard.html"><button class="bg-violet-600 hover:bg-violet-700 text-white px-5 py-4 rounded-xl transition duration-300"><i class="fa-regular fa-eye pr-2"></i>Preview do Dashboard</button></a>
+                </div>
+            </div>
+
+            <!--imagem-->
+            <div class="relative basis-1/2 mt-10 lg:mt-0">
+                <div class="absolute w-96 h-96 bg-violet-600 rounded-full blur-3xl opacity-40"></div>
+                <img src="public/img/imagem-dashboard.jpeg" alt="Preview do Dashboard" class="relative z-10 rounded-2xl border border-zinc-700">
+            </div>
+            <!--fim imagem-->
+
+        </section>
+        <!--fim hero-->
+
+        <!--beneficios-->
+        <section class="beneficios flex flex-col lg:flex-row gap-5 px-8 justify-center pt-10">
+            <article class="card-beneficio bg-zinc-800 border border-zinc-700
+            p-6 rounded-2xl hover:border-violet-600">
+                <i class="fa-regular fa-square-check text-4xl text-violet-600"></i>
+                <h3 class="font-bold text-xl">Organização total</h3>
+                <p class="text-zinc-400">Tenha todas as suas tarefas organizadas em um só lugar.</p>
+            </article>
+
+            <article class="card-beneficio bg-zinc-800 border border-zinc-700
+            p-6 rounded-2xl hover:border-violet-600">
+                <i class="fa-solid fa-arrow-trend-up text-4xl text-violet-600"></i>
+                <h3 class="font-bold text-xl">Mais produtividade</h3>
+                <p class="text-zinc-400">Acompanhe seu progresso e foque no que realmente importa.</p>
+            </article>
+
+            <article class="card-beneficio bg-zinc-800 border border-zinc-700
+            p-6 rounded-2xl hover:border-violet-600">
+                <i class="fa-regular fa-calendar text-4xl text-violet-600"></i>
+                <h3 class="font-bold text-xl">Prazos e prioridades</h3>
+                <p class="text-zinc-400">Defina prioridades e prazos para nunca mais perder nada.</p>
+            </article>
+
+            <article class="card-beneficio bg-zinc-800 border border-zinc-700
+            p-6 rounded-2xl hover:border-violet-600">
+                <i class="fa-solid fa-user-group text-4xl text-violet-600"></i>
+                <h3 class="font-bold text-xl">Simples e intuitivo</h3>
+                <p class="text-zinc-400">Interface moderna e fácil de usar para o seu dia a dia.</p>
+            </article>
+        </section>
+        <!--fim beneficios-->
+
+        <!--duvida-->
+        <section class="px-8 py-20">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="basis-1/2 mb-8">
+                    <h2 class="text-5xl pb-2 font-bold">Ficou com alguma dúvida?</h2>
+                    <p class="text-zinc-400">Nos envie sua mensagem e entraremos em contato.</p>
+                </div>
+
+                <div class="bg-zinc-800 border border-zinc-700 rounded-2xl p-8 basis-1/2">
+                    <form id="formDuvida" class="flex flex-col gap-3" autocomplete="off">
+                        <label for="nome">Nome:</label>
+                        <input class="bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600" type="text" name="nome" id="nome">
+
+                        <label for="email">E-mail:</label>
+                        <input class="bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600" type="email" name="email" id="email">
+
+                        <label for="duvida">Mande sua dúvida:</label>
+                        <textarea class="bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 h-20 resize-none focus:outline-none focus:border-violet-600" name="duvida" id="duvida"></textarea>
+
+                        <button class="bg-violet-600 hover:bg-violet-700 rounded-xl py-3 transition duration-300">Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--fim duvida-->
+
+    </main>
+    <footer class="px-8 py-8 border-t border-zinc-800 mt-8">
+
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div>
+                <div class="flex justify-center lg:justify-start items-center gap-1">
+                    <i class="fa-solid fa-check text-2xl text-violet-600"></i>
+                    <h1 class="text-2xl font-bold">Opus<span class="text-violet-600">Run</span></h1>
+                </div>
+                <p class="text-zinc-500 text-sm pt-2">Organize tarefas e aumente sua produtividade.</p>
+            </div>
+
+            <div>
+                <p class="text-zinc-500 text-sm">© 2026 OpusRun. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--modal mensagem enviada-->
+    <div id="modalMensagemEnviada" class="hidden z-50 fixed inset-0 bg-black/60 flex items-center justify-center">
+        <div class="flex flex-col justify-center items-center bg-zinc-900 border border-zinc-800 rounded-xl p-6 w-96">
+            <i class="fa-solid fa-paper-plane text-violet-600 text-6xl"></i>
+            <h2 class="text-2xl font-bold">Mensagem enviada!</h2>
+            <span class="text-sm mb-4">Em breve responderemos sua dúvida!</span>
+            <button id="fecharMensagemEnviada" class="px-4 py-2 bg-violet-600 rounded-xl w-24">Fechar</button>
+        </div>
+    </div>
+
+    <!--modal em breve-->
+    <div id="modalEmBreve" class="hidden fixed z-50 inset-0 bg-black/60 flex items-center justify-center">
+        <div class="flex flex-col justify-center items-center bg-zinc-900 border border-zinc-800 rounded-xl p-6 w-96">
+            <i class="fa-solid fa-wrench text-violet-600 text-6xl"></i>
+            <h2 class="text-2xl font-bold">Em breve</h2>
+            <span class="text-sm mb-4 text-center">O sistema de login e cadastro ainda não está disponível nesta demonstração. Esta funcionalidade será adicionada em futuras versões do OpusRun.</span>
+            <button id="fecharEmBreve" class="px-4 py-2 bg-violet-600 rounded-xl w-24">Entendi</button>
+        </div>
+    </div>
+
+    <script src="public/js/landingPage.js"></script>
+</body>
+</html>
