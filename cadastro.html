@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - OpusRun</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <linkrel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+
+<body class="bg-zinc-900 text-white min-h-screen flex items-center justify-center">
+
+    <main class="w-full max-w-md px-6">
+
+        <div class="bg-zinc-800 border border-zinc-700 rounded-2xl p-8">
+
+            <div class="text-center mb-8">
+                <i class="fa-solid fa-check text-4xl text-violet-600"></i>
+
+                <h1 class="text-3xl font-bold mt-2">
+                    Opus<span class="text-violet-600">Run</span>
+                </h1>
+
+                <p class="text-zinc-400 mt-2">
+                    Crie sua conta
+                </p>
+            </div>
+
+            <form id="formCadastro" class="flex flex-col gap-4">
+                <div>
+                    <label for="nome" class="block mb-2">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600"
+                        placeholder="Digite seu nome"
+                    >
+                </div>
+
+                <div>
+                    <label for="email" class="block mb-2">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600"
+                        placeholder="Digite seu e-mail"
+                    >
+                </div>
+
+                <div>
+                    <label for="senha" class="block mb-2">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600"
+                        placeholder="Digite sua senha"
+                    >
+                </div>
+
+                <div>
+                    <label for="confirmarSenha" class="block mb-2">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600"
+                        placeholder="Confirme sua senha"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="bg-violet-600 hover:bg-violet-700 rounded-xl py-3 mt-2 transition duration-300"
+                >
+                    Criar conta
+                </button>
+
+            </form>
+
+            <p class="text-center text-zinc-400 mt-6">
+
+                Já possui uma conta?
+
+                <a
+                    href="login.html"
+                    class="text-violet-600 hover:text-violet-500"
+                >
+                    Fazer login
+                </a>
+
+            </p>
+
+            <div class="text-center mt-4">
+                <a href="index.html" class="text-sm text-zinc-500 hover:text-zinc-300">
+                    ← Voltar para o início
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="public/js/cadastro.js"></script>
+
+</body>
+
+</html>
