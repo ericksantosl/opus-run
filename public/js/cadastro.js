@@ -2,7 +2,6 @@ const formCadastro = document.getElementById('formCadastro');
 
 formCadastro.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
