@@ -37,13 +37,15 @@ async function verificarSessao() {
             credentials: 'include'
         });
 
+        console.log('Status /me:', response.status);
+        console.log('Resposta /me:', response);
+
         const data = await response.json();
 
-        console.log('Sessão:', data);
+        console.log('Dados da sessão:', data);
 
         if (!data.userId) {
-            console.log('Usuário não autenticado:', data);
-            alert('Sessão não encontrada. Veja o console.');
+            console.log('ATENÇÃO: sessão não possui userId.');
             return false;
         }
 
@@ -52,8 +54,7 @@ async function verificarSessao() {
         return true;
 
     } catch (error) {
-        console.error('Erro ao verificar sessão:', error);
-        window.location.href = 'login.html';
+        console.error('ERRO NO /me:', error);
         return false;
     }
 }
@@ -67,7 +68,7 @@ async function carregarTarefas() {
         });
 
         if (response.status === 401) {
-            window.location.href = 'login.html';
+            //window.location.href = 'login.html';
             return;
         }
 
@@ -206,7 +207,7 @@ formNovaTarefa.addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.status === 401) {
-            window.location.href = 'login.html';
+            //window.location.href = 'login.html';
             return;
         }
 
