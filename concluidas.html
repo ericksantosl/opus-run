@@ -71,7 +71,7 @@
                         <i class="fa-solid fa-circle-check text-4xl text-green-500 bg-green-200 p-3 rounded-xl"></i>
                         <div>
                             <span class="text-sm text-zinc-950">Concluídas</span>
-                            <h2 class="text-4xl text-green-500 font-bold">3</h2>
+                            <h2 id="totalConcluidas" class="text-4xl text-green-500 font-bold">0</h2>
                         </div>
                     </div>
 
@@ -79,26 +79,7 @@
 
                 <div class="border-b border-zinc-800"></div>
                 
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Enviar e-mail para clientes</span>
-                    <button class="btn-excluir text-red-600 hover:text-red-500 transition duration-300">
-                        <i class="fa-solid fa-trash text-2xl"></i>
-                    </button>
-                </article>
-
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Comprar materiais de escritório</span>
-                    <button class="btn-excluir text-red-600 hover:text-red-500 transition duration-300">
-                        <i class="fa-solid fa-trash text-2xl"></i>
-                    </button>
-                </article>
-
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Reunião com a equipe</span>
-                    <button class="btn-excluir text-red-600 hover:text-red-500 transition duration-300">
-                        <i class="fa-solid fa-trash text-2xl"></i>
-                    </button>
-                </article>
+                <div id="listaTarefas"></div>
             </section>
             <!--fim lista tarefas concluídas-->
         </div>
