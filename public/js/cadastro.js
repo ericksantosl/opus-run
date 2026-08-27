@@ -34,7 +34,7 @@ formCadastro.addEventListener('submit', async (e) => {
         formCadastro.reset();
 
         window.location.href = 'login.html';
-
+        
     } catch (error) {
         console.error(error);
         alert('Erro ao conectar com o servidor.');
