@@ -33,10 +33,11 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=-9.6658&longitude=-35.735
     document.getElementById('temperatura').innerText = 'Erro ao carregar';
 });
 
-fetch('https://opusrun-backend.onrender.com/me', {method: 'GET', credentials: 'include'
-}).then(response => response.json()).then(data => {
+fetch('https://opusrun-backend.onrender.com/me', {method: 'GET', credentials: 'include'}).then(response => response.json()).then(data => {
     console.log('Sessão:', data);
-}).catch(error => {
+    console.log('User ID:', data.userId);
+    console.log('Nome:', data.userName);
+})
+.catch(error => {
     console.error('Erro ao verificar sessão:', error);
 });
-
