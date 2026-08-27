@@ -9,10 +9,7 @@ const btnFecharTarefaConcluida = document.getElementById('fecharTarefaConcluida'
 
 async function verificarSessao() {
     try {
-        const response = await fetch(`${API_URL}/me`, {
-            method: 'GET',
-            credentials: 'include'
-        });
+        const response = await fetch(`${API_URL}/me`, { method: 'GET', credentials: 'include' });
 
         const data = await response.json();
 
@@ -27,7 +24,6 @@ async function verificarSessao() {
         console.error('Erro ao verificar sessão:', error);
 
         window.location.href = 'login.html';
-
         return false;
     }
 }
@@ -61,11 +57,7 @@ async function carregarTarefasPendentes() {
     } catch (error) {
         console.error('Erro ao carregar tarefas:', error);
 
-        listaTarefas.innerHTML = `
-            <p class="px-8 text-zinc-400">
-                Erro ao carregar as tarefas.
-            </p>
-        `;
+        listaTarefas.innerHTML = `<p class="px-8 text-zinc-400">Erro ao carregar as tarefas.</p>`;
     }
 }
 
@@ -74,27 +66,14 @@ function mostrarTarefasPendentes(tarefas) {
     listaTarefas.innerHTML = '';
 
     if (tarefas.length === 0) {
-        listaTarefas.innerHTML = `
-            <p class="px-8 text-zinc-400">
-                Nenhuma tarefa pendente.
-            </p>
-        `;
-
+        listaTarefas.innerHTML = `<p class="px-8 text-zinc-400">Nenhuma tarefa pendente.</p>`;
         return;
     }
 
     tarefas.forEach((tarefa, index) => {
         const artigo = document.createElement('article');
 
-        artigo.classList.add(
-            'flex',
-            'justify-between',
-            'px-8',
-            'items-center',
-            'pb-4',
-            'border-b',
-            'border-zinc-800'
-        );
+        artigo.classList.add('flex', 'justify-between', 'px-8', 'items-center', 'py-4', 'border-b', 'border-zinc-800');
 
         if (index === tarefas.length - 1) {
             artigo.classList.remove('border-b');
@@ -106,17 +85,9 @@ function mostrarTarefasPendentes(tarefas) {
 
         const botao = document.createElement('button');
 
-        botao.classList.add(
-            'btn-concluir',
-            'text-green-600',
-            'hover:text-green-500',
-            'transition',
-            'duration-300'
-        );
+        botao.classList.add('btn-concluir', 'text-green-600', 'hover:text-green-500', 'transition', 'duration-300' );
 
-        botao.innerHTML = `
-            <i class="fa-solid fa-square-check text-2xl"></i>
-        `;
+        botao.innerHTML = `<i class="fa-solid fa-square-check text-2xl"></i>`;
 
         botao.addEventListener('click', () => {
             concluirTarefa(tarefa.id);

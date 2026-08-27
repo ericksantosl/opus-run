@@ -8,18 +8,7 @@ formCadastro.addEventListener('submit', async (e) => {
     const confirmarSenha = document.getElementById('confirmarSenha').value;
 
     try {
-
-        const response = await fetch('https://opusrun-backend.onrender.com/auth/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                nome,
-                email,
-                senha,
-                confirmarSenha
-            })
+        const response = await fetch('https://opusrun-backend.onrender.com/auth/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({nome, email, senha, confirmarSenha})
         });
 
         const data = await response.json();
@@ -34,7 +23,6 @@ formCadastro.addEventListener('submit', async (e) => {
         formCadastro.reset();
 
         window.location.href = 'login.html';
-        
     } catch (error) {
         console.error(error);
         alert('Erro ao conectar com o servidor.');

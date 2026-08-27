@@ -38,7 +38,7 @@
                 <h1 class="text-5xl pb-2 font-bold">Organize suas tarefas e seja <span class="text-violet-600">mais produtivo</span></h1>
                 <p class="text-zinc-400">Gerencie suas tarefas, acompanhe o progresso e alcance seus objetivos com o OpusRun.</p>
                 <div class="pt-5">
-                    <a href="dashboard.html"><button class="bg-violet-600 hover:bg-violet-700 text-white px-5 py-4 rounded-xl transition duration-300"><i class="fa-regular fa-eye pr-2"></i>Preview do Dashboard</button></a>
+                    <a href="cadastro.html" class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 px-6 py-3 rounded-xl transition duration-300">Começar agora<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -84,32 +84,42 @@
         </section>
         <!--fim beneficios-->
 
-        <!--duvida-->
+        <!-- como funciona -->
         <section class="px-8 py-20">
-            <div class="flex flex-col lg:flex-row items-center justify-between">
-                <div class="basis-1/2 mb-8">
-                    <h2 class="text-5xl pb-2 font-bold">Ficou com alguma dúvida?</h2>
-                    <p class="text-zinc-400">Nos envie sua mensagem e entraremos em contato.</p>
-                </div>
+            <div class="text-center mb-12">
+                <span class="text-violet-600 font-semibold">SIMPLES E PRÁTICO</span>
+                <h2 class="text-3xl lg:text-4xl font-bold mt-2">Como funciona?</h2>
+                <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">Organize suas tarefas e acompanhe seu progresso em poucos passos.</p>
+            </div>
 
-                <div class="bg-zinc-800 border border-zinc-700 rounded-2xl p-8 basis-1/2">
-                    <form id="formDuvida" class="flex flex-col gap-3" autocomplete="off">
-                        <label for="nome">Nome:</label>
-                        <input class="bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600" type="text" name="nome" id="nome">
+            <div class="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+                <!-- passo 1 -->
+                <article class="flex-1 text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-violet-600 text-2xl font-bold">01</div>
+                    <h3 class="text-xl font-bold mt-5">Crie sua conta</h3>
+                    <p class="text-zinc-400 mt-2">Faça seu cadastro de forma rápida e comece a organizar sua rotina.</p>
+                </article>
 
-                        <label for="email">E-mail:</label>
-                        <input class="bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 focus:outline-none focus:border-violet-600" type="email" name="email" id="email">
+                <!-- passo 2 -->
+                <article class="flex-1 text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-violet-600 text-2xl font-bold">02</div>
+                    <h3 class="text-xl font-bold mt-5">Adicione suas tarefas</h3>
+                    <p class="text-zinc-400 mt-2">Registre tudo o que precisa fazer e mantenha suas atividades organizadas.</p>
+                </article>
 
-                        <label for="duvida">Mande sua dúvida:</label>
-                        <textarea class="bg-zinc-900 border border-zinc-700 rounded-xl px-5 py-3 h-20 resize-none focus:outline-none focus:border-violet-600" name="duvida" id="duvida"></textarea>
+                <!-- passo 3 -->
+                <article class="flex-1 text-center">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-violet-600 text-2xl font-bold">03</div>
+                    <h3 class="text-xl font-bold mt-5">Acompanhe seu progresso</h3>
+                    <p class="text-zinc-400 mt-2">Marque tarefas como concluídas e acompanhe sua evolução.</p>
+                </article>
+            </div>
 
-                        <button class="bg-violet-600 hover:bg-violet-700 rounded-xl py-3 transition duration-300">Enviar mensagem</button>
-                    </form>
-                </div>
+            <div class="text-center mt-12">
+                <a href="cadastro.html" class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 px-6 py-3 rounded-xl transition duration-300">Começar agora<i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </section>
-        <!--fim duvida-->
-
+        <!-- fim como funciona -->
     </main>
     <footer class="px-8 py-8 border-t border-zinc-800 mt-8">
 
@@ -128,15 +138,6 @@
         </div>
     </footer>
 
-    <!--modal mensagem enviada-->
-    <div id="modalMensagemEnviada" class="hidden z-50 fixed inset-0 bg-black/60 flex items-center justify-center">
-        <div class="flex flex-col justify-center items-center bg-zinc-900 border border-zinc-800 rounded-xl p-6 w-96">
-            <i class="fa-solid fa-paper-plane text-violet-600 text-6xl"></i>
-            <h2 class="text-2xl font-bold">Mensagem enviada!</h2>
-            <span class="text-sm mb-4">Em breve responderemos sua dúvida!</span>
-            <button id="fecharMensagemEnviada" class="px-4 py-2 bg-violet-600 rounded-xl w-24">Fechar</button>
-        </div>
-    </div>
     <script src="public/js/landingPage.js"></script>
 </body>
 </html>

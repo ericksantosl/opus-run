@@ -7,18 +7,7 @@ formLogin.addEventListener('submit', async (e) => {
     const senha = document.getElementById('senha').value;
 
     try {
-
-        const response = await fetch('https://opusrun-backend.onrender.com/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: 'include',
-            body: JSON.stringify({
-                email,
-                senha
-            })
-        });
+        const response = await fetch('https://opusrun-backend.onrender.com/auth/login', {method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials:  'include', body: JSON.stringify({ email, senha })});
 
         const data = await response.json();
 
