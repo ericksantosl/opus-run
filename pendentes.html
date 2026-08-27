@@ -71,7 +71,7 @@
                         <i class="fa-solid fa-clock text-4xl text-yellow-500 bg-yellow-200 p-3 rounded-xl"></i>
                         <div>
                             <span class="text-sm text-zinc-950">Pendentes</span>
-                            <h2 class="text-4xl text-yellow-500 font-bold">4</h2>
+                            <h2 id="totalPendentes" class="text-4xl text-yellow-500 font-bold">0</h2>
                         </div>
                     </div>
 
@@ -79,33 +79,7 @@
 
                 <div class="border-b border-zinc-800"></div>
 
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Estudar para a prova</span>
-                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
-                        <i class="fa-solid fa-square-check text-2xl"></i>
-                    </button>
-                </article>
-
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Finalizar relatório do projeto</span>
-                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
-                        <i class="fa-solid fa-square-check text-2xl"></i>
-                    </button>
-                </article>
-                
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Atualizar planilha de dados</span>
-                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
-                        <i class="fa-solid fa-square-check text-2xl"></i>
-                    </button>
-                </article>
-
-                <article class="flex justify-between px-8 items-center pb-4 border-b border-zinc-800">
-                    <span>Reunião com o time de vendas</span>
-                    <button class="btn-concluir text-green-600 hover:text-green-500 transition duration-300">
-                        <i class="fa-solid fa-square-check text-2xl"></i>
-                    </button>
-                </article>
+                <div id="listaTarefas"></div>
             </section>
             <!--fim lista tarefas recentes-->
         </div>
