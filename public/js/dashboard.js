@@ -42,7 +42,8 @@ async function verificarSessao() {
         console.log('Sessão:', data);
 
         if (!data.userId) {
-            window.location.href = 'login.html';
+            console.log('Usuário não autenticado:', data);
+            alert('Sessão não encontrada. Veja o console.');
             return false;
         }
 
